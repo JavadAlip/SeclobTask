@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryGreen: '#00a572', 
+        primaryGreen: '#006465', 
+        bgcategory: '#dcf0f2',
       },
     },
   },
