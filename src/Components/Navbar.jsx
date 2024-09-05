@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi"; 
 import Logo from '../assets/aloha.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -11,31 +11,21 @@ const Navbar = () => {
   return (
     <nav className="bg-white">
       <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Logo */}
         <div>
-        <img src={Logo} alt="" style={{ width: '50px', height: '25px', cursor: 'pointer' }} />
+          <img src={Logo} alt="" style={{ width: '50px', height: '25px', cursor: 'pointer' }} />
         </div>
 
-        {/* Hamburger Icon for Mobile */}
+        {/* Icon for Mobile */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
             className="text-primaryGreen focus:outline-none"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-              ></path>
-            </svg>
+            {isOpen ? (
+              <HiX className="w-6 h-6" /> // Close icon when menu is open
+            ) : (
+              <HiMenu className="w-6 h-6" /> // Hamburger icon when menu is closed
+            )}
           </button>
         </div>
 
