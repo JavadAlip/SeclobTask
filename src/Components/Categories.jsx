@@ -3,7 +3,6 @@ import { MdArrowForward } from 'react-icons/md';
 import guideImg from '../assets/Ellipse 10.png'
 
 const categories = ['Adventure', 'Culinary', 'Eco-tourism', 'Family', 'Sport'];
-
 const Categories = () => {
     return (
         <div name='projects' className='w-full md:h-screen mt-16 sm:mt-0 bg-bgcategory'>
